@@ -1,0 +1,8 @@
+#darkModeToggle{
+    top: 50%;
+    right: 5px;
+    position: fixed;
+    z-index: 50;
+    cursor: pointer;
+
+}

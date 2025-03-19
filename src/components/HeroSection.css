@@ -1,0 +1,194 @@
+/* HeroSection.css */
+
+.hero-section {
+  font-family: "Arial", sans-serif;
+  background-color: light; /* Light cream */
+
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  flex-wrap: wrap; /* Allows for wrapping content on smaller screens */
+}
+
+.text-content {
+  max-width: 50%;
+  text-align: left;
+  margin-bottom: 2rem; /* Space for smaller screens */
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  color: light;
+  font-family: cursive;
+
+}
+
+.text-content .highlight {
+  color: #ffc107;
+  font-family: cursive;
+  font-size: 3rem;
+  /* font-weight: 700; */
+}
+
+.text-content .description {
+  font-size: 1.5rem;
+  color: light;
+  margin: 1rem 0;
+  /* font-weight: 600; */
+  font-family: math;
+}
+
+.experience {
+  margin-top: 2rem;
+  color: light;
+}
+
+.years {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffc107;
+  font-family: math;
+  /* font-family:  monospace; */
+}
+
+.asp {
+  font-size: 2.5rem;
+  color: light;
+  font-family: cursive;
+}
+
+.image-content {
+  position: relative;
+  max-width: 40%; /* Adjust width for smaller screens */
+  text-align: center;
+}
+
+.profile-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffc107;
+}
+
+.reviews {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: light;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.review-stars {
+  color: #ffc107;
+}
+
+.rating {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: light;
+}
+
+.creative-tagline {
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: light;
+}
+
+.creative-tagline span {
+  color: #3b82f6;
+}
+
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+
+  }
+  /* .text-content h2 
+    {
+    font-size: 3.5rem;
+
+  } */
+
+  .image-content {
+    max-width: 80%; /* Smaller profile image on smaller screens */
+    margin-bottom: 2rem;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .reviews {
+    bottom: -100px; /* Adjust review position */
+    padding: 0.5rem;
+  }
+
+  .creative-tagline {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-content h2 {
+    font-size: 2rem;
+  }
+
+  .text-content .description {
+    font-size: 1rem;
+  }
+
+  .text-content .highlight {
+    font-size: 1.5rem;
+  }
+
+  .experience {
+    margin-top: 1rem;
+  }
+
+  .years {
+    font-size: 1.75rem;
+  }
+
+  .asp {
+    font-size: 2rem;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .reviews {
+    bottom: -90px;
+    width: 80%; /* Adjust width of reviews container */
+  }
+
+  .creative-tagline {
+    font-size: 1rem;
+  }
+}

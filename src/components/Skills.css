@@ -1,0 +1,73 @@
+/* Skills.css */
+
+#skills {
+  position: relative;
+  padding: 4rem 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.wave-background {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  color: #2d3748;
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  color: light;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: color-animation 4s linear infinite;
+  background: linear-gradient(90deg, #ff0000, #ff0000, #0062ff, #5f34d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.skill-item p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2d3748;
+}

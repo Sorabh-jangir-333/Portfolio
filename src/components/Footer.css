@@ -1,0 +1,37 @@
+/* Footer Styling */
+footer {
+  margin-top: 3rem;
+    background-color: light;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .social-link {
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-link:hover {
+    animation: color-animation 4s linear infinite;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #d4fc79);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+  }
+  
+  /* Gradient Animation */
+  @keyframes color-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
