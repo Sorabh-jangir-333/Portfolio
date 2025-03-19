@@ -6,13 +6,8 @@
   padding: 1rem 0;
   position: relative;
   padding-top: 10px;
+  width: 100%;
 }
-
-/* .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: whitesmoke;
-} */
 
 /* Navigation Links */
 .nav {
@@ -25,7 +20,7 @@
 
 .nav a {
   font-weight: 500;
-  color: light;
+  color: whitesmoke;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
 }
@@ -42,7 +37,7 @@
 .menu-btn {
   display: none;
   font-size: 2.5rem;
-  color: light;
+  color: whitesmoke;
   background: none;
   border: none;
   cursor: pointer;
@@ -79,90 +74,80 @@
 
 /* Responsive Menu Styling */
 @media screen and (max-width: 768px) {
-  .header{
-    padding-top: 10px;
-    padding: 1rem 0;
-
+  .header {
+    /* padding: 1rem 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
   }
+
   .menu-btn {
-    padding: 0.75rem;
     display: block;
+    font-size: 2rem;
     cursor: pointer;
     z-index: 50;
+    color: #2d3748;
   }
 
-  /* Initial State for .nav */
+  /* Mobile Navigation Menu */
   .nav {
-    display: none; /* Hidden initially */
-    flex-direction: column;
-    position: fixed;
-    top: 4%;
-    right: 15%;
-    background-color: rgba(45, 55, 72, 0.95); /* Semi-transparent dark background */
-    width: 75%;
-    height: 60vh; /* Full height for a more immersive menu */
-    padding-top: 4rem; /* Space from top */
+    visibility: hidden;
     opacity: 0;
-    transform: translateX(100%); /* Start off-screen */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(27, 26, 26, 0.9);
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    padding: 2rem;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     z-index: 40;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
   }
 
-  /* When .nav is Open */
+  /* When Menu is Open */
   .nav.open {
-    align-items: baseline;
-    margin-left: auto;
-    margin-right: 45%;
-    width: 40%;
-    display: flex; /* Make visible */
-    opacity: 1; /* Fade in */
-    transform: translateX(0); /* Slide into view */
-    /* border-radius: 50px 0 50px 0; */
-    border-radius: 8px;
-    text-align: center; 
-    background-color: rgba(27, 26, 26, 0.259); /* Transparent background */
-    backdrop-filter: blur(5px); /* Blur effect */
-    -webkit-backdrop-filter: blur(15px); /* Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for the glass look */
-    /* padding: 32px; */
-    flex: 1 ;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
-    color: #ffc107; /* Ensure text is readable */
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); /* Add subtle text shadow */
-    
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
   }
 
-  /* Navigation Links */
   .nav a {
-    padding: 1rem;
-    margin: 0.5rem 0 ;
     font-size: 1.5rem;
-    font-weight: 500;
-    color: #ffc107; /* White text */
+    color: #ffc107;
     text-decoration: none;
-    text-align: center;
-    transition: color 3s ease-in-out, transform 3s ease-in-out;
+    top: auto;
+    /* padding: 1rem; */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   .nav a:hover {
-    color: #2d3748; /* Blue hover effect */
-    transform: scale(1.1); /* Slight zoom */
+    color: light;
+    transform: scale(1.1);
   }
-#X_icon{
-  position: absolute;
-  top: 20%;
-  /* right: 20%; */
-  left: 28%;
-}
+
+  /* Close Button */
+  #X_icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2d3748;
+  }
+
   /* Download Button */
   .download-btn {
-    width: 60%;
-    /* margin: 1rem auto; */
+    width: 80%;
     padding: 0.75rem;
     font-size: 1rem;
     text-align: center;
-    background-color: #2d3748; /* Blue button */
+    background-color: #2d3748;
     color: white;
     border: none;
     border-radius: 5px;
@@ -171,8 +156,8 @@
   }
 
   .download-btn:hover {
-    background-color: white; 
+    background-color: white;
     color: #2d3748;
-    transform: scale(1.05); /* Slight zoom */
+    transform: scale(1.05);
   }
 }
