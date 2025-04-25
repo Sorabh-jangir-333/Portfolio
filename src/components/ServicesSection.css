@@ -8,7 +8,7 @@
 .services-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #2d3748; /* Dark text color */
+  color: light; /* Dark text color */
   margin-bottom: 3rem;
 }
 
@@ -21,10 +21,9 @@
 }
 
 .service-card {
-  background: white;
+  background: light;
   border-radius: 1rem; /* Rounded corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  padding: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -40,18 +39,18 @@
 .service-icon {
   font-size: 3rem; /* Bigger icons */
   margin-bottom: 1rem;
-  color: #4a90e2; /* Blue accent */
+  color: #527fcb; /* Blue accent */
 }
 
 .service-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2d3748; /* Darker text */
+  color: light; /* Darker text */
   margin-bottom: 1rem;
 }
 
 .service-description {
   font-size: 1rem;
-  color: #4a5568; /* Gray text */
+  color: light; /* Gray text */
   line-height: 1.6;
 }

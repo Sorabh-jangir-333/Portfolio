@@ -4,7 +4,7 @@ import profileImage from "./profile_photo.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       <div className="container">
       
         <div className="hero-content">

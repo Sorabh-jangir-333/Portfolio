@@ -13,7 +13,7 @@ const Projects = () => {
       title: "Job Portal (MERN Stack)",
       description:
         "Developed a full-stack job portal with authentication, job postings, resume uploads, and application tracking.",
-      link: "#",
+      link: "https://github.com/Sorabh-jangir-333/Job-Portal-MERN-Stack",
     },
     {
       title: "E-commerce Website",
@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: "Rate Your Instructor",
       description:
-        "Created a website for students to review and rate professors based on various criteria. The platform also allows instructors to manage their profiles.",
+        "Created a website for students to review and rate professors based on various criteria. The platform also allows instructors to manage their profiles. Gives students a voice to share honest feedback.",
       link: "https://github.com/Sorabh-jangir-333/Rate-Your-Instructor",
     },
     {
@@ -50,7 +50,12 @@ const Projects = () => {
             <div key={index} className="project-card">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
-              <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.link}
+                className="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View Project
               </a>
             </div>

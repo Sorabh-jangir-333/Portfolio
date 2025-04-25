@@ -9,7 +9,7 @@
   padding: 24px;
   flex-wrap: wrap; /* Enable wrapping for smaller screens */
   margin-bottom: 16px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
 }
 
 /* Contact Info Styling */
@@ -21,7 +21,7 @@
   padding: 36px;
   border-radius: 50px 0 0 0;
   flex: 1;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
   color: white;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
 }
@@ -55,7 +55,7 @@
   padding: 36px;
   border-radius: 0 0 50px 0;
   flex: 2;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Lighter shadow */
   color: white;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -96,28 +96,44 @@
   font-size: 1rem;
 }
 
-/* Enhanced UI Button */
-.ui-btn {
-  padding: 16px 24px;
-  font-size: 17px;
-  font-weight: 600;
+.send-btn {
+  padding: 8px 12px;
+  font-size: 16px;
   font-family: "Menlo", "Roboto Mono", monospace;
-  background: rgb(41, 41, 41);
+  background: linear-gradient(135deg, #2e2e2e, #1a1a1a);
   color: white;
   border: none;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
-.ui-btn:hover {
-  background-color: #fac921;
+.send-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.send-btn:hover::before {
+  left: 130%;
+}
+
+.send-btn:hover {
+  background: linear-gradient(135deg, #fac921, #f8d26a);
   color: black;
-  transform: scale(1.06);
-  box-shadow: 0 6px 16px rgba(250, 201, 33, 0.5);
+  transform: scale(1.05); /* Slightly larger scale */
+  box-shadow: 0 8px 20px rgba(250, 201, 33, 0.5);
 }
 
 /* Mobile Adjustments */
@@ -167,4 +183,15 @@
     padding: 10px;
     font-size: 1rem;
   }
+}
+
+/* Dark Mode Styling */
+body.dark .contact-info {
+  background: rgba(85, 90, 120, 0.6);
+  color: #dcdcdc;
+}
+
+body.dark .contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  color: #dcdcdc;
 }

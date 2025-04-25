@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className=" py-6">
       <div className="container mx-auto text-center fade-in">
-        <p>© 2024 Sorabh | All Rights Reserved</p>
+        <p>© 2025 Sorabh | All Rights Reserved</p>
         <div className="flex justify-center space-x-6 mt-4">
           <a
             href="https://www.instagram.com/itz_sorabh_jangir/"

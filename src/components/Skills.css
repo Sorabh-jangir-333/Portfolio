@@ -8,7 +8,7 @@
 
 .wave-background {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  color: #2d3748;
+  background-color: #1a202cbb; /* Added dark background */
   padding: 6rem 2rem;
 }
 
@@ -20,7 +20,7 @@
 
 #skills h2 {
   font-size: 2.5rem;
-  color: light;
+  color: #f0f0f0; /* Fixed invalid color */
   margin-bottom: 2rem;
   font-weight: bold;
 }
@@ -43,17 +43,16 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  background-color: #ffffff;
+  background-color: lightgray; /* Fixed invalid color */
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
-  background-color: transparent;
+  background-color: #2d3748;
   transform: scale(1.1);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: color-animation 4s linear infinite;
   background: linear-gradient(90deg, #ff0000, #ff0000, #0062ff, #5f34d6);
   -webkit-background-clip: text;

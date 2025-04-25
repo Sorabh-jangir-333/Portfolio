@@ -42,7 +42,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="services-section">
+    <section id="Services" className="services-section">
       <h2 className="services-title">My Services</h2>
       <div className="services-grid">
         {services.map((service, index) => (

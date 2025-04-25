@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
+import { Link } from "react-scroll";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,16 +33,52 @@ const Header = () => {
   return (
     <header className="header">
       <nav className={`nav ${isMenuOpen ? "open" : ""}`} role="navigation">
-        <a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a>
-        <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
-        <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
-        <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Home
+        </Link>
+        <Link
+          to="Services"
+          smooth={true}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Services
+        </Link>
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Projects
+        </Link>
+        <Link
+          to="skills"
+          smooth={true}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Skills
+        </Link>
+        <Link
+          to="ContactSection"
+          smooth={true}
+          duration={500}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Contact
+        </Link>
       </nav>
 
       {/* Toggle Button */}
-      <button 
-        className="menu-btn" 
-        onClick={toggleMenu} 
+      <button
+        className="menu-btn"
+        onClick={toggleMenu}
         aria-label="Toggle Menu"
         aria-expanded={isMenuOpen}
       >
@@ -47,11 +86,17 @@ const Header = () => {
       </button>
 
       {/* Download CV Button */}
-      <a href="/sorabh_resume.pdf" download="Sorabh_CV.pdf" className="download-btn">
-        Download CV
-      </a>
+      <a
+  href="/sorabh_resume.pdf"
+  download="Sorabh_CV.pdf"
+  className="download-btn"
+  onClick={() => toast.success("Download started! 🎉")}
+>
+  Download CV
+</a>
     </header>
   );
 };
+<ToastContainer position="top-center" />
 
 export default Header;

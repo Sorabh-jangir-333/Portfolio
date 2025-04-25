@@ -27,11 +27,11 @@ const Stats = () => {
           <div>Client Satisfaction</div>
         </div>
         <div className="stats-item">
-          <div className="stats-count">{count / 2 - 30}</div>
+          <div className="stats-count">{count / 2 - 39}</div>
           <div>Projects Delivered</div>
         </div>
         <div className="stats-item">
-          <div className="stats-count">{count / 4}</div>
+          <div className="stats-count">{count / 10}</div>
           <div>Happy Clients</div>
         </div>
       </div>

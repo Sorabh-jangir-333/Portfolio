@@ -20,15 +20,17 @@
 
 .nav a {
   font-weight: 500;
-  color: whitesmoke;
+  color: light;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .nav a:hover {
   animation: color-animation 4s linear infinite;
   background: linear-gradient(90deg, #bb9b50, #aaa048, #3b82f6, #ec4899);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.1);
 }

@@ -19,7 +19,6 @@ function App() {
       <Stats/>
       <Skills />
       <Projects />
-      {/* <Testimonials /> */}
       <ServicesSection />
       <ContactForm />
       <Footer />
